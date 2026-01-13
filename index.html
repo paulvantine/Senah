@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Senah by Paul Van Tine</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: #e0e0ff;
+      background: #0a0015 url('https://images.unsplash.com/photo-1462331940025-496dfbfc7564?auto=format&fit=crop&q=80') center/cover no-repeat fixed;
+      min-height: 100vh;
+      overflow-x: hidden;
+      position: relative;
+    }
+    /* Overlay for purple quasar/electric glow */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background: radial-gradient(circle at 30% 40%, rgba(180, 0, 255, 0.18) 0%, rgba(90, 0, 180, 0.09) 40%, transparent 70%);
+      pointer-events: none;
+      z-index: 1;
+    }
+    body::after {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background: radial-gradient(circle at 70% 60%, rgba(200, 100, 255, 0.12) 0%, transparent 60%);
+      pointer-events: none;
+      z-index: 1;
+      opacity: 0.7;
+    }
+    .container {
+      position: relative;
+      z-index: 2;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 40px 20px;
+      text-align: center;
+    }
+    h1 {
+      font-size: 4.2rem;
+      margin-bottom: 0.2em;
+      text-shadow: 0 0 30px #b060ff, 0 0 60px #9030ff;
+      color: #f0e0ff;
+      letter-spacing: 2px;
+    }
+    h2 {
+      font-size: 2.4rem;
+      color: #d0b0ff;
+      margin: 20px 0 40px;
+      text-shadow: 0 0 20px #a040ff;
+    }
+    .book-info {
+      background: rgba(20, 5, 40, 0.65);
+      backdrop-filter: blur(8px);
+      border: 1px solid rgba(180, 100, 255, 0.35);
+      border-radius: 16px;
+      padding: 40px;
+      margin: 40px 0;
+      text-align: left;
+      box-shadow: 0 0 50px rgba(140, 0, 255, 0.4);
+    }
+    .synopsis {
+      line-height: 1.7;
+      font-size: 1.15rem;
+      margin-bottom: 2em;
+    }
+    .highlight {
+      color: #ffccff;
+      font-weight: bold;
+    }
+    .buy-links {
+      margin: 50px 0;
+    }
+    .btn {
+      display: inline-block;
+      background: linear-gradient(135deg, #9f40ff, #d080ff);
+      color: white;
+      padding: 16px 40px;
+      margin: 12px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-size: 1.3rem;
+      font-weight: bold;
+      box-shadow: 0 8px 30px rgba(140, 0, 255, 0.5);
+      transition: all 0.3s;
+    }
+    .btn:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 15px 40px rgba(140, 0, 255, 0.7);
+    }
+    .author {
+      font-size: 1.3rem;
+      margin: 60px 0 20px;
+      color: #c0a0ff;
+    }
+    footer {
+      margin-top: 80px;
+      font-size: 0.95rem;
+      opacity: 0.8;
+    }
+    /* Twinkling stars effect (optional enhancement) */
+    .stars {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 0;
+      background: transparent;
+    }
+    .star {
+      position: absolute;
+      background: white;
+      border-radius: 50%;
+      animation: twinkle 4s infinite alternate;
+    }
+    @keyframes twinkle {
+      0% { opacity: 0.4; }
+      100% { opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Optional twinkling stars (randomly placed via JS) -->
+  <div class="stars" id="stars"></div>
+
+  <div class="container">
+    <h1>Senah</h1>
+    <h2>by Paul Van Tine</h2>
+
+    <div class="book-info">
+      <p class="synopsis">
+        The invention of the subspace warp engine opened the universe to humanity, ending Earth's long isolation and beginning an age of exploration among the stars. The research vessel <em>Intrepid</em> was sent to the distant constellation Pavo to seek new worlds and, perhaps, new life...
+      </p>
+      <p class="synopsis">
+        What began as a routine survey quickly became something extraordinary. On a habitable planet orbiting Gamma Pavonis, the crew encountered the Pavonians—a humanoid people with a feudal society sustained by behemoths and the enslavement of another race. Human technology seemed like sorcery to them, but human biology—particularly male pheromones—ignited a powerful, dangerous attraction.
+      </p>
+      <p class="synopsis">
+        <span class="highlight">Senah</span>, a Pavonian behemoth captain, saw the strategic value and orchestrated the capture of crew members to unlock the path to Earth. What followed was subterfuge, captivity, raids, and war. More than a million humans were enslaved before Earth's defenses rallied.
+      </p>
+      <p class="synopsis">
+        <strong>Senah</strong> tells a story of first contact gone wrong—two civilizations meeting across the stars and discovering not harmony, but desire, envy, and the will to possess. A tale of exploration, captivity, resistance, morality, and the dangerous truths uncovered when species collide.
+      </p>
+
+      <p><strong>Genre:</strong> Science Fiction</p>
+      <p><strong>Formats & Pricing:</strong></p>
+      <ul>
+        <li>Ebook — $2.99 (PDF, ePub, Kindle — instant download)</li>
+        <li>Paperback — $17.95 + shipping</li>
+        <li>Hardcover — $30.95 + shipping</li>
+      </ul>
+      <p>250 pages | Published by BookLocker</p>
+
+      <p><strong>Read a FREE excerpt:</strong> <a href="https://assets.booklocker.com/pdfs/14329s.pdf" target="_blank" style="color:#d0b0ff;">here</a> (PDF)</p>
+    </div>
+
+    <div class="buy-links">
+      <a href="https://share.google/qPQRgvnDk1N9twL0e" target="_blank" class="btn">Buy / Learn More</a>
+      <!-- Add more links if you have Amazon, Goodreads, etc. later -->
+    </div>
+
+    <div class="author">
+      About the Author<br>
+      Paul Van Tine has lived in the mountains of West Texas for over twenty-five years with his partner Bryan and their dogs. The dark skies, wildlife, and solitude inspire his writing, stone masonry, and love of astronomy.
+    </div>
+
+    <footer>
+      © 2026 Senah by Paul Van Tine • Site crafted with cosmic vibes
+    </footer>
+  </div>
+
+  <script>
+    // Simple twinkling stars
+    const starsContainer = document.getElementById('stars');
+    for (let i = 0; i < 120; i++) {
+      const star = document.createElement('div');
+      star.className = 'star';
+      star.style.width = star.style.height = Math.random() * 3 + 'px';
+      star.style.top = Math.random() * 100 + '%';
+      star.style.left = Math.random() * 100 + '%';
+      star.style.animationDelay = Math.random() * 4 + 's';
+      starsContainer.appendChild(star);
+    }
+  </script>
+</body>
+  </html>
